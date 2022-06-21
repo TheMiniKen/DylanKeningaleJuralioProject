@@ -35,7 +35,7 @@ const func_AddNote = () => {
 
 	//add the note and then select it so that it can be edited
     notes_List_Data[notes_List_Data.length] = {id:(lastId+1), title:"", note:"", date:formattedDate, time:formattedTime};
-	console.log(notes_List_Data);
+	//console.log(notes_List_Data);
 	$$("id_notesList").parse(notes_List_Data);
     $$("id_notesList").select($$('id_notesList').getLastId());
 }
@@ -100,7 +100,7 @@ const func_ConvertIdToElement = (id) => {
 //this runs every time a change is detected in the text box by attaching it to the text box in the webix render function
 //if the text in the text box changes we save it and update the list to represent this change
 const func_TextChanged = () => {
-	console.log("changed");
+	//console.log("changed");
 	func_SaveSelection();
 	$$("id_notesList").parse(notes_List_Data);
 }
@@ -118,5 +118,5 @@ const func_ChangeSelection = () => {
 	currentSelected = func_ConvertIdToElement(currentId);
 	$$("id_NoteTextBox").setValue(notes_List_Data[currentSelected].note);
 	$$("id_notesList").parse(notes_List_Data);
-	console.log(JSON.stringify(notes_List_Data));
+	//console.log(JSON.stringify(notes_List_Data));
 }
