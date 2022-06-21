@@ -27,7 +27,7 @@ const func_CheckQuery = (searchType) => {
 
 //function that gets all the tasks from the server and passes it to the display function
 const func_GetTaskAll = async () => {
-    console.log("Search All");
+    //console.log("Search All");
     const response = await fetch('http://localhost:3000/tasks');
     const jsonResponse = await response.json();
     func_ParseResponse(jsonResponse);
@@ -35,7 +35,7 @@ const func_GetTaskAll = async () => {
 
 //function that gets a task via its id and passes it to the display function
 const func_GetTaskID = async (searchValue) => {
-    console.log("Task ID");
+    //console.log("Task ID");
     var fetchString = ("http://localhost:3000/tasks?id=" + searchValue);
     const response = await fetch(fetchString);
     const jsonResponse = await response.json();
@@ -44,7 +44,7 @@ const func_GetTaskID = async (searchValue) => {
 
 //function that querys the database via the string entered and then passes it to the display function
 const func_GetTaskName = async (searchValue) => {
-    console.log("Task Name");
+    //console.log("Task Name");
     var fetchString = ("http://localhost:3000/tasks?q=" + searchValue);
     const response = await fetch(fetchString);
     const jsonResponse = await response.json();
