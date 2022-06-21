@@ -1,0 +1,31 @@
+<html>
+    <head>
+      <link rel="stylesheet" href="Libraries/Webix/skins/material.css" type="text/css" charset="utf-8">
+      <script src="Libraries/Webix/webix.js" type="text/javascript" charset="utf-8"></script>
+    </head>
+    <body>
+      <script>
+          webix.ready(function(){
+              webix.ui(
+                    { cols:[
+                        {},
+                        { rows:[
+                            {},
+                            {
+                                view:"form",
+                                width:400, autoheight:true,
+                                elements:[
+                                    { view: "template", template: "Juralio Excercise Showcase", type:"header" },
+                                    { view:"button", label:"Frontend Showcase", click:"window.location.href = 'FrontendShowcase.html'" },
+                                    { view:"button", label:"Backend Showcase", click:"window.location.href = 'BackendShowcase.html'" },
+                                ]
+                            },
+                            {},
+                        ]},
+                        {},
+                    ]}
+                );
+            });
+      </script>
+    </body>
+</html>

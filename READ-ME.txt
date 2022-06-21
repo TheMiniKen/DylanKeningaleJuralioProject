@@ -1,0 +1,17 @@
+Hi Juralio,
+
+To run this code all that the user should need todo is:
+1. download XAMPP
+2. move the contents of this folder into the htdocs folder within xampp (making sure to remove/replace the old index file)
+3. open the cmd navigate to the htdocs folder (should be C:/xampp/htdocs) and then run the command "json-server --watch tasks.json" to start the json server
+4. open xampp and start apache
+5. navigate to localhost via the web browser
+6. it should then display a screen allowing you to view the frontend exercise or backend exercise
+
+
+Just to mention I've commented this code a lot more than usual to show my thoughts behind the design and my thought process. ALso leaving the code to be expanded upon further.
+It was mentioned in the first exercise to include my approach to styling. I haven’t modified the default Webix stylesheets but have
+interpreted this as styling for user experience instead of the look of the page. Thus I’ve focused on making the pages simple and intuitive to use and hopefully better for the end user
+
+Thanks,
+Dylan

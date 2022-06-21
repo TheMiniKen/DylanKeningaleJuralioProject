@@ -1,0 +1,54 @@
+<html>
+    <head>
+      <link rel="stylesheet" href="Libraries/Webix/skins/material.css" type="text/css" charset="utf-8">
+      <script src="Libraries/Webix/webix.js" type="text/javascript" charset="utf-8"></script>
+      <script src="JS/FrontendShowcase.js" type="text/javascript" charset="utf-8"></script>
+    </head>
+    <body>
+      <script>
+          func_Main();
+
+
+          //webix function that displays the page
+          //each item on the page is contained within {} with all the information needed to create it
+          //any functions we need to attach to the items within the page are applied at the end
+          function func_WebixRender() {
+              webix.ready(function(){
+                  webix.ui(
+                        { rows:[
+                            { cols:[
+                            { view: "template", template: "Juralio Frontend Excercise Showcase", type:"header", height:40 },
+                            { view:"button", label:"Return", click:"window.location.href = 'index.html'", width:150  },
+                            ]},
+                            { cols:[
+                                { rows:[
+                                    { cols:[
+                                        { view:"button", label:"Add Note", click:func_AddNote },
+                                        { view:"button", label:"Delete Note", click:func_DeleteNote },
+                                    ]},
+                                    {
+                                        view:"list",
+                                        id: "id_notesList",
+                                        template:"Note:#title#<br/>Date:#date# Time:#time#",
+                                        type:{
+                                            height:60
+                                        },
+                                        select:true,
+                                        width: 450,
+                                        height:0,
+                                        data:notes_List_Data
+                                    },
+                                ]},
+                                { view:"textarea", name:"note", id:"id_NoteTextBox", attributes:{ maxlength :15000 }, margin:15 },
+                            ]},
+                        ]}
+                    );
+                    $$("id_notesList").attachEvent("onSelectChange", func_ChangeSelection);
+                    $$("id_NoteTextBox").attachEvent("onKeyPress", func_TextChanged);
+                    $$("id_notesList").select(1);
+                });
+                return;
+            }
+      </script>
+    </body>
+</html>

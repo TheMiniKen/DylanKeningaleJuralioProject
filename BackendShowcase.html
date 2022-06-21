@@ -1,0 +1,40 @@
+<html>
+    <head>
+      <link rel="stylesheet" href="Libraries/Webix/skins/material.css" type="text/css" charset="utf-8">
+      <script src="Libraries/Webix/webix.js" type="text/javascript" charset="utf-8"></script>
+      <script src="JS/BackendShowcase.js" type="text/javascript" charset="utf-8"></script>
+    </head>
+    <body>
+      <script>
+          func_Main();
+
+
+
+          //webix function that displays the page
+          //each item on the page is contained within {} with all the information needed to create it
+          function func_WebixRender() {
+              webix.ready(function(){
+                  webix.ui(
+                        { rows:[
+                            { cols:[
+                            { view: "template", template: "Juralio Backend Excercise Showcase", type:"header", height:40 },
+                            { view:"button", label:"Return", click:"window.location.href = 'index.html'", width:150  },
+                            ]},
+                            { cols:[
+                                { rows:[
+                                        { view:"button", id:"getAll", label:"Get All Tasks", click:func_CheckQuery }, //the id of the button gets passed into the function so we use this to know what button the function is being called from
+                                        { view:"button", id:"search", label:"Search Tasks", click:func_CheckQuery },
+                                        { view:"text", id:"inp_SearchBox", label:"Search Box", labelWidth:150 },
+                                        {},
+
+                                ]},
+                                { view:"textarea", name:"note", id:"id_NoteTextBox", attributes:{ maxlength :15000 }, margin:15,gravity:2 },
+                            ]},
+                        ]}
+                    );
+                });
+                return;
+            }
+      </script>
+    </body>
+</html>

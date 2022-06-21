@@ -1,0 +1,12 @@
+{
+ "tasks": [
+     {"id":1,"task":"clean house","description":"the house needs cleaned","duedate":"22-06-2022"},
+     {"id":2,"task":"wash clothes","description":"need to put clothes in the washing machine","duedate":"19-06-2022"},
+     {"id":3,"task":"clean the car","description":"the car could do with a big clean interior and exterior","duedate":"19-01-2022"},
+     {"id":4,"task":"feed the cats","description":"need to feed the cats some tuna","duedate":"19-06-2022"},
+     {"id":5,"task":"go to the shop","description":"need to buy tuna, juice, chicken from the shop","duedate":"20-06-2022"},
+     {"id":6,"task":"pay bills","description":"Sky is asking for more money","duedate":"20-06-2022"},
+     {"id":7,"task":"fix flooring","description":"the floor needs to be screwed down properly","duedate":"20-06-2022"},
+     {"id":8,"task":"get petrol","description":"the car needs some petrol (unleaded)","duedate":"21-06-2022"}
+ ]
+}
